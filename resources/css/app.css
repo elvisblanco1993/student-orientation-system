@@ -1,0 +1,93 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@layer utilities {
+
+    * {
+        font-family: 'Inter', sans-serif;
+    }
+
+    [x-cloak] { display: none !important; }
+
+    .section-button {
+        @apply col-span-2 md:col-span-1 p-6 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition;
+    }
+
+    label {
+        @apply dark:text-gray-300 !important;
+    }
+
+    [type="text"],
+    [type="email"],
+    [type="url"],
+    [type="password"],
+    [type="number"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="search"],
+    [type="tel"],
+    [type="time"],
+    [type="week"],
+    [multiple],
+    textarea,
+    select {
+        @apply mt-1 inline-flex w-full items-center px-2 py-1 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-md font-medium text-gray-700 dark:text-gray-200 shadow-sm transition;
+    }
+
+    [type="text"]:focus,
+    [type="email"]:focus,
+    [type="url"]:focus,
+    [type="password"]:focus,
+    [type="number"]:focus,
+    [type="date"]:focus,
+    [type="datetime-local"]:focus,
+    [type="month"]:focus,
+    [type="search"]:focus,
+    [type="tel"]:focus,
+    [type="time"]:focus,
+    [type="week"]:focus,
+    [multiple]:focus,
+    textarea:focus,
+    select:focus {
+        @apply outline-none border-indigo-300 dark:border-indigo-800 ring ring-indigo-200 dark:ring-indigo-700 ring-opacity-50;
+    }
+
+    [type="text"]:active,
+    [type="email"]:active,
+    [type="url"]:active,
+    [type="password"]:active,
+    [type="number"]:active,
+    [type="date"]:active,
+    [type="datetime-local"]:active,
+    [type="month"]:active,
+    [type="search"]:active,
+    [type="tel"]:active,
+    [type="time"]:active,
+    [type="week"]:active,
+    [multiple]:active,
+    textarea:active,
+    select:active {
+        @apply text-gray-800 dark:text-gray-200;
+    }
+
+    [type="text"]:disabled,
+    [type="email"]:disabled,
+    [type="url"]:disabled,
+    [type="password"]:disabled,
+    [type="number"]:disabled,
+    [type="date"]:disabled,
+    [type="datetime-local"]:disabled,
+    [type="month"]:disabled,
+    [type="search"]:disabled,
+    [type="tel"]:disabled,
+    [type="time"]:disabled,
+    [type="week"]:disabled,
+    [multiple]:disabled,
+    textarea:disabled,
+    select:disabled {
+        @apply opacity-25;
+    }
+}
