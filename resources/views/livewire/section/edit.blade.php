@@ -3,21 +3,21 @@
         {{-- Edit Video Section --}}
         @if ($section->type == 'video')
             <div class="mb-4">
-                <label for="url" class="block font-medium text-sm text-gray-700">{{__("Video URL")}}</label>
+                <label for="url" >{{__("Video URL")}}</label>
                 <input type="text" id="url" wire:model.defer="url">
                 @error("url")
                     <small class="text-red-600">{{ $message }}</small>
                 @enderror
             </div>
             <div class="mb-4">
-                <label for="title" class="block font-medium text-sm text-gray-700">{{__("Title")}}</label>
+                <label for="title" >{{__("Title")}}</label>
                 <input type="text" id="title" wire:model.defer="title" value="{{$section->title}}">
                 @error("title")
                     <small class="text-red-600">{{ $message }}</small>
                 @enderror
             </div>
             <div class="mb-4">
-                <label for="content" class="block font-medium text-sm text-gray-700">{{__("Description")}}</label>
+                <label for="content" >{{__("Description")}}</label>
                 <textarea id="content" cols="30" rows="6" wire:model.defer="content"></textarea>
             </div>
         @endif
@@ -28,7 +28,7 @@
                 <input type="file" id="file" wire:model.defer="file">
             </div>
             <div class="mb-4">
-                <label for="title" class="block font-medium text-sm text-gray-700">{{__("Title")}}</label>
+                <label for="title" >{{__("Title")}}</label>
                 <input type="text" id="title" wire:model.defer="title" value="{{$section->title}}">
                 @error("title")
                     <small class="text-red-600">{{ $message }}</small>
@@ -39,14 +39,14 @@
         {{-- Edit Website Section --}}
         @if ($section->type == 'website')
             <div class="mb-4">
-                <label for="url" class="block font-medium text-sm text-gray-700">{{__("Video URL")}}</label>
+                <label for="url" >{{__("Video URL")}}</label>
                 <input type="text" id="url" wire:model.defer="url">
                 @error("url")
                     <small class="text-red-600">{{ $message }}</small>
                 @enderror
             </div>
             <div class="mb-4">
-                <label for="title" class="block font-medium text-sm text-gray-700">{{__("Title")}}</label>
+                <label for="title" >{{__("Title")}}</label>
                 <input type="text" id="title" wire:model.defer="title" value="{{$section->title}}">
                 @error("title")
                     <small class="text-red-600">{{ $message }}</small>
@@ -57,14 +57,14 @@
         {{-- Edit Tet Section --}}
         @if ($section->type == 'text')
             <div class="mb-4">
-                <label for="title" class="block font-medium text-sm text-gray-700">{{__("Title")}}</label>
+                <label for="title" >{{__("Title")}}</label>
                 <input type="text" id="title" wire:model.defer="title" value="{{$section->title}}">
                 @error("title")
                     <small class="text-red-600">{{ $message }}</small>
                 @enderror
             </div>
             <div class="mb-4">
-                <label for="content" class="block font-medium text-sm text-gray-700">{{__("Description")}}</label>
+                <label for="content" >{{__("Description")}}</label>
                 <textarea id="content" cols="30" rows="6" wire:model.defer="content">{{$section->content}}</textarea>
             </div>
         @endif

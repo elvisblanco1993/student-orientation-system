@@ -6,7 +6,7 @@
             </h2>
 
             @if (auth()->user()->role == 'admin')
-                <a href="{{ route('orientation.create') }}" class="text-xs uppercase font-semibold text-gray-800">New Orientation</a>
+                <a href="{{ route('orientation.create') }}" class="text-xs uppercase font-semibold text-gray-800 dark:text-white">New Orientation</a>
             @endif
 
         </div>

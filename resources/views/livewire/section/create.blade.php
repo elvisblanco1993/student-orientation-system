@@ -55,21 +55,21 @@
         </x-slot>
         <x-slot name="content">
             <div class="mb-4">
-                <label for="url" class="block font-medium text-sm text-gray-700">{{__("Video URL")}}</label>
+                <label for="url" >{{__("Video URL")}}</label>
                 <input type="text" id="url" wire:model="url">
                 @error("url")
                     <small class="text-red-600">{{ $message }}</small>
                 @enderror
             </div>
             <div class="mb-4">
-                <label for="title" class="block font-medium text-sm text-gray-700">{{__("Title")}}</label>
+                <label for="title" >{{__("Title")}}</label>
                 <input type="text" id="title" wire:model="title">
                 @error("title")
                     <small class="text-red-600">{{ $message }}</small>
                 @enderror
             </div>
             <div class="">
-                <label for="content" class="block font-medium text-sm text-gray-700">{{__("Description")}}</label>
+                <label for="content" >{{__("Description")}}</label>
                 <textarea id="content" cols="30" rows="6" wire:model="content"></textarea>
             </div>
         </x-slot>
@@ -93,7 +93,7 @@
                 <input type="file" id="file" wire:model="file">
             </div>
             <div class="mb-4">
-                <label for="title" class="block font-medium text-sm text-gray-700">{{__("Subtitle")}}</label>
+                <label for="title" >{{__("Subtitle")}}</label>
                 <input type="text" id="title" wire:model="title">
             </div>
         </x-slot>
@@ -117,7 +117,7 @@
                 <input type="file" id="file" wire:model="file">
             </div>
             <div class="mb-4">
-                <label for="title" class="block font-medium text-sm text-gray-700">{{__("Subtitle")}}</label>
+                <label for="title" >{{__("Subtitle")}}</label>
                 <input type="text" id="title" wire:model="title">
             </div>
         </x-slot>
@@ -138,7 +138,7 @@
         </x-slot>
         <x-slot name="content">
             <div class="mb-4">
-                <label for="url" class="block font-medium text-sm text-gray-700">{{__("Website URL")}}</label>
+                <label for="url" >{{__("Website URL")}}</label>
                 <input type="text" id="url" wire:model="url">
             </div>
         </x-slot>
@@ -159,14 +159,14 @@
         </x-slot>
         <x-slot name="content">
             <div class="mb-4">
-                <label for="title" class="block font-medium text-sm text-gray-700">{{__("Title")}}</label>
+                <label for="title" >{{__("Title")}}</label>
                 <input type="text" id="title" wire:model="title">
                 @error("title")
                     <small class="text-red-600">{{ $message }}</small>
                 @enderror
             </div>
             <div class="">
-                <label for="content" class="block font-medium text-sm text-gray-700">{{__("Description")}}</label>
+                <label for="content" >{{__("Description")}}</label>
                 <textarea id="content" cols="30" rows="6" wire:model="content"></textarea>
             </div>
         </x-slot>
