@@ -1,6 +1,6 @@
 <div>
     <div class="w-full md:min-h-screen p-0 m-0">
-        <div class="md:flex md:min-h-screen divide-x">
+        <div class="md:flex md:min-h-screen divide-x dark:divide-x dark:divide-gray-700">
             <div class="w-full h-full md:w-2/6 lg:w-1/6 dark:bg-gray-900 p-4" x-data="{open: true}">
                 <a href="{{route('dashboard')}}"
                     class="text-xs font-medium flex items-center justify-between gap-2 dark:text-white">
@@ -85,8 +85,8 @@
                     </div>
                 </div>
                 {{-- Controls --}}
-                <div class="w-full max-h-1/6">
-                    <div class="w-full md:w-2/3 mx-auto rounded-2xl px-4 sm:px-8 py-4 sm:py-8 bg-gradient-to-r from-blue-500 to-green-500 flex items-center justify-between mt-8">
+                <div class="w-full max-h-1/6 mb-8">
+                    <div class="w-full md:w-2/3 mx-auto rounded-2xl px-4 sm:px-8 py-4 sm:py-8 bg-gradient-to-t from-blue-600 to-blue-500 flex items-center justify-between mt-8">
                         <button wire:click="prev({{$section->position}})" class="flex-none h-12 w-12 rounded-full border bg-white bg-opacity-20 hover:bg-opacity-50 text-white transition">
                             <div class="w-full h-full flex items-center justify-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
