@@ -5,6 +5,14 @@
 
 @layer utilities {
 
+    .mobil {
+        @apply hidden;
+    }
+
+    .desktop {
+        @apply block;
+    }
+
     * {
         font-family: 'Inter', sans-serif;
     }
