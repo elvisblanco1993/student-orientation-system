@@ -1,13 +1,13 @@
 <x-app-layout>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center py-2 border-b dark:border-b-gray-700">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-2 border-b ">
             @include('orientations.menu')
         </div>
     </div>
 
     <div class="my-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="font-extrabold text-2xl mb-4 dark:text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="font-extrabold text-2xl mb-4 ">
                 {{__("Sections")}}
             </div>
 

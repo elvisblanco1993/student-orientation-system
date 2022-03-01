@@ -15,9 +15,9 @@ class CreateQuestionsTable extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
-            $table->integer('position');
-            $table->string('type');
+            $table->foreignId('section_id');
             $table->string('question');
+            $table->string('correct_answer');
             $table->timestamps();
         });
     }

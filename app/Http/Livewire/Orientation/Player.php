@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire\Orientation;
 
-use Illuminate\Support\Facades\DB;
+use App\Models\Question;
+use App\Models\Section;
 use Livewire\Component;
+use Illuminate\Support\Facades\DB;
 
 class Player extends Component
 {
@@ -73,7 +75,7 @@ class Player extends Component
         $this->sections = $this->orientation->sections()->orderBy('position', 'asc')->get();
 
         return view('livewire.orientation.player', [
-            'section' => $section
+            'section' => $section,
         ]);
     }
 }

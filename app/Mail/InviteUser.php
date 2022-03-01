@@ -32,6 +32,6 @@ class InviteUser extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.invite-user');
+        return $this->subject('URBE University Orientation')->markdown('emails.invite-user');
     }
 }

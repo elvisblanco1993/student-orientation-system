@@ -1,19 +1,19 @@
 <div>
     <ul wire:sortable="updateSectionOrder">
         @forelse ($sections as $section)
-            <li class="w-full max-w-7xl border dark:border-gray-700 rounded-lg py-2 px-4 my-2 bg-white dark:bg-gray-900" wire:sortable.item="{{ $section->id }}" wire:key="section-{{ $section->id }}" x-data="{ open: false }">
+            <li class="w-full max-w-5xl border  rounded-lg py-2 px-4 my-2 bg-white " wire:sortable.item="{{ $section->id }}" wire:key="section-{{ $section->id }}" x-data="{ open: false }">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-4">
                         <button wire:sortable.handle>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 hover:text-gray-900 dark:hover:text-gray-300 active:text-gray-900 focus:text-gray-900 transition" viewBox="0 0 20 20" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 hover:text-gray-900  active:text-gray-900 focus:text-gray-900 transition" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M5 12a1 1 0 102 0V6.414l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L5 6.414V12zM15 8a1 1 0 10-2 0v5.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L15 13.586V8z" />
                             </svg>
                         </button>
                         <div>
-                            <div class="font-semibold dark:text-white">
+                            <div class="font-semibold ">
                                 {{ $section->title }}
                             </div>
-                            <div class="inline-block text-xs font-semibold uppercase tracking-wider px-2 text-gray-600 dark:text-gray-500 bg-gray-200 dark:bg-gray-800 rounded">
+                            <div class="inline-block text-xs font-semibold uppercase tracking-wider px-2 text-gray-600  bg-gray-200  rounded">
                                 {{$section->type}}
                             </div>
                         </div>

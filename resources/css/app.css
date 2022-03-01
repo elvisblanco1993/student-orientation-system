@@ -20,11 +20,15 @@
     [x-cloak] { display: none !important; }
 
     .section-button {
-        @apply col-span-2 md:col-span-1 p-6 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition;
+        @apply col-span-2 md:col-span-1 p-6 text-center rounded-lg hover:bg-gray-100  transition;
     }
 
     label {
-        @apply block font-medium text-sm text-gray-700 dark:text-gray-300 !important;
+        @apply block font-medium text-sm text-gray-700;
+    }
+
+    [type="file"] {
+        @apply block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100;
     }
 
     [type="text"],
@@ -42,60 +46,6 @@
     [multiple],
     textarea,
     select {
-        @apply mt-1 inline-flex w-full items-center px-2 py-1 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-md font-medium text-gray-700 dark:text-gray-200 shadow-sm transition;
-    }
-
-    [type="text"]:focus,
-    [type="email"]:focus,
-    [type="url"]:focus,
-    [type="password"]:focus,
-    [type="number"]:focus,
-    [type="date"]:focus,
-    [type="datetime-local"]:focus,
-    [type="month"]:focus,
-    [type="search"]:focus,
-    [type="tel"]:focus,
-    [type="time"]:focus,
-    [type="week"]:focus,
-    [multiple]:focus,
-    textarea:focus,
-    select:focus {
-        @apply outline-none border-indigo-300 dark:border-indigo-800 ring ring-indigo-200 dark:ring-indigo-700 ring-opacity-50;
-    }
-
-    [type="text"]:active,
-    [type="email"]:active,
-    [type="url"]:active,
-    [type="password"]:active,
-    [type="number"]:active,
-    [type="date"]:active,
-    [type="datetime-local"]:active,
-    [type="month"]:active,
-    [type="search"]:active,
-    [type="tel"]:active,
-    [type="time"]:active,
-    [type="week"]:active,
-    [multiple]:active,
-    textarea:active,
-    select:active {
-        @apply text-gray-800 dark:text-gray-200;
-    }
-
-    [type="text"]:disabled,
-    [type="email"]:disabled,
-    [type="url"]:disabled,
-    [type="password"]:disabled,
-    [type="number"]:disabled,
-    [type="date"]:disabled,
-    [type="datetime-local"]:disabled,
-    [type="month"]:disabled,
-    [type="search"]:disabled,
-    [type="tel"]:disabled,
-    [type="time"]:disabled,
-    [type="week"]:disabled,
-    [multiple]:disabled,
-    textarea:disabled,
-    select:disabled {
-        @apply opacity-25;
+        @apply border-gray-300 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 rounded-md block w-full mt-1;
     }
 }

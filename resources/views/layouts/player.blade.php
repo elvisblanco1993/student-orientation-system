@@ -21,7 +21,7 @@
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+        <div class="min-h-screen bg-gray-50 ">
             <!-- Page Content -->
             @yield('content')
         </div>

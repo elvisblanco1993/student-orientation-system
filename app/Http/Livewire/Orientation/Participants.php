@@ -20,6 +20,7 @@ class Participants extends Component
             'email' => 'required|email',
         ]);
 
+
         // Check if the user already exists
         if ( User::where('email', $this->email)->count() == 1 ) {
             try {
@@ -41,6 +42,7 @@ class Participants extends Component
                 ->insert([
                     'email' => $this->email,
                     'token' => $token,
+                    'orientation_id' => $this->orientation->id
                 ]);
                 Mail::to($this->email)->send(new InviteUser($token, $this->orientation->id));
                 session()->flash('flash.banner', 'Invitation sent!');

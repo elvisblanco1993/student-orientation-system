@@ -19,6 +19,11 @@ class Section extends Model
         'position'
     ];
 
+    public function question()
+    {
+        return $this->hasOne(Question::class);
+    }
+
     public function orientation()
     {
         return $this->belongsTo(Orientation::class)->withDefault();

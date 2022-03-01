@@ -1,13 +1,18 @@
 @component('mail::message')
-# Orientation is ready.
+Dear student,
 
-Hello there,
-We just wanted to let you know that your orientation is ready. You can access it and complete it by clicking on the button below.
+The team at URBE University welcomes you with warm hearts.
+
+Prior to begin your first semester you need to complete the University's orientation process.
+We highly recommend that you separate at least 1 hour of your time so that you can complete the orientation.
+If you cannot finish it, do not worry. You can always complete it at another time of your choosing.
 
 @component('mail::button', ['url' => $url])
-Orientation
+Begin the Orientation Process
 @endcomponent
 
-Thanks,<br>
+If you have any questions during the orientation, please contact your Admissions representative.
+
+With warm regards,<br>
 {{ config('app.name') }}
 @endcomponent

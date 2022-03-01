@@ -1,5 +1,5 @@
 <div>
-    <div class="border border-gray-200 dark:border-gray-700 rounded-lg px-4 pt-2 my-2 bg-gray-50 dark:bg-gray-800">
+    <div class="border border-gray-200  rounded-lg px-4 pt-2 my-2 bg-gray-50 ">
         {{-- Edit Video Section --}}
         @if ($section->type == 'video')
             <div class="mb-4">

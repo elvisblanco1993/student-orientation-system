@@ -19,17 +19,17 @@ sudo mysql_secure_installation;
 sudo mysql -u root -p;
 
 # Create DB and set DB user privileges
-CREATE DATABASE voicebits;
-CREATE USER 'voicebits'@'localhost' IDENTIFIED BY 'Bahia#9398!!';
-ALTER USER 'voicebits'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Bahia#9398!!';
-GRANT ALL PRIVILEGES ON voicebits.* to 'voicebits'@'localhost' WITH GRANT OPTION;
+CREATE DATABASE onboard;
+CREATE USER 'onboard'@'localhost' IDENTIFIED BY 'Bahia#9398!!';
+ALTER USER 'onboard'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Bahia#9398!!';
+GRANT ALL PRIVILEGES ON onboard.* to 'onboard'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 exit;
 
 # Setting Folder Permissions
-sudo chgrp -R www-data . ;
-sudo chown -R $USER:www-data storage;
-sudo chown -R $USER:www-data bootstrap/cache;
+sudo chgrp -R elvis . ;
+sudo chown -R elvis storage;
+sudo chown -R elvis bootstrap/cache;
 chmod -R 775 ./storage;
 chmod -R 775 bootstrap/cache;
 
@@ -37,13 +37,13 @@ composer install && composer update;
 npm install && npm update;
 
 # Create Nginx File
-sudo nano /etc/nginx/sites-available/voicebits
+sudo nano /etc/nginx/sites-available/onboard
 
 # File content starts here
 server {
-    listen 80;
+    listen 81;
     server_name momo.local; # Edit this
-    root /home/elvis/Projects/app.voicebits.co/public; # Edit this
+    root /home/elvis/Projects/student-onboarding-app/public; # Edit this
 
     add_header X-Frame-Options "SAMEORIGIN";
     add_header X-XSS-Protection "1; mode=block";
@@ -78,7 +78,7 @@ server {
 # File content ends here
 
 # Enable NGINX Site
-sudo ln -s /etc/nginx/sites-available/voicebits /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/onboard /etc/nginx/sites-enabled/
 sudo rm /etc/nginx/sites-enabled/default;
 
 # Restart Nginx Server
